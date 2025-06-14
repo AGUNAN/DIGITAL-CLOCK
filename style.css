@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.clock-container {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.dark-mode .clock-container {
+    background: linear-gradient(145deg, #222222, #333333);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.time {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.dark-mode .time {
+    color: #00ffaa;
+    text-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+}
+
+.date {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.dark-mode .date {
+    color: #aaa;
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a4a4a;
+    color: white;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a5a5a;
+    transform: translateY(-2px);
+}
+
+.dark-mode button {
+    background-color: #00ffaa;
+    color: #121212;
+}
+
+.dark-mode button:hover {
+    background-color: #00cc88;
+}
+
+@media (max-width: 600px) {
+    .time {
+        font-size: 3rem;
+    }
+    .date {
+        font-size: 1rem;
+    }
+}
